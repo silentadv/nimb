@@ -1,0 +1,21 @@
+{
+  "name": "@nimb/rest",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsup src --dts --out-dir=./build"
+  },
+  "keywords": [],
+  "author": "silentadv",
+  "license": "MIT",
+  "packageManager": "pnpm@10.7.0",
+  "devDependencies": {
+    "@nimb/types": "workspace:^",
+    "discord-api-types": "^0.37.119"
+  },
+  "dependencies": {
+    "undici": "^7.6.0"
+  }
+}

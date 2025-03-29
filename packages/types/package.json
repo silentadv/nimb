@@ -1,0 +1,19 @@
+{
+  "name": "@nimb/types",
+  "version": "1.0.0",
+  "description": "",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "silentadv",
+  "license": "MIT",
+  "packageManager": "pnpm@10.7.0",
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "@types/ws": "^8.18.0",
+    "discord-api-types": "^0.37.119",
+    "typescript": "^5.8.2"
+  }
+}

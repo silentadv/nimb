@@ -1,0 +1,24 @@
+{
+  "name": "@nimb/core",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsup src --out-dir=./build"
+  },
+  "keywords": [],
+  "author": "silentadv",
+  "license": "MIT",
+  "packageManager": "pnpm@10.7.0",
+  "devDependencies": {
+    "@nimb/types": "workspace:^",
+    "@types/node": "^22.13.14",
+    "discord-api-types": "^0.37.119",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@nimb/gateway": "workspace:^",
+    "@nimb/rest": "workspace:^"
+  }
+}

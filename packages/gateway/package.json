@@ -1,0 +1,25 @@
+{
+  "name": "@nimb/gateway",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsup src --dts --out-dir=./build"
+  },
+  "keywords": [],
+  "author": "silentadv",
+  "license": "MIT",
+  "packageManager": "pnpm@10.7.0",
+  "dependencies": {
+    "@nimb/types": "workspace:^",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "@types/ws": "^8.18.0",
+    "discord-api-types": "^0.37.119",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}
