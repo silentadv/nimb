@@ -101,6 +101,9 @@ importers:
       '@nimb/core':
         specifier: workspace:^
         version: link:../packages/core
+      '@nimb/types':
+        specifier: workspace:^
+        version: link:../packages/types
     devDependencies:
       '@types/node':
         specifier: ^22.13.14

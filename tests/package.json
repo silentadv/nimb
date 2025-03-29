@@ -17,6 +17,7 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@nimb/core": "workspace:^"
+    "@nimb/core": "workspace:^",
+    "@nimb/types": "workspace:^"
   }
 }
