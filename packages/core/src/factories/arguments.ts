@@ -1,37 +1,38 @@
-import { PrefixedCommandArgument } from "@nimb/types";
+import {
+  PartialPrefixedCommandArgument,
+  PrefixedCommandArgument,
+} from "@nimb/types";
 
 export interface BaseArgumentOptions {
-  name: string;
   description?: string;
 }
 
-export function createStringArgument({
-  name,
-  description,
-}: BaseArgumentOptions): PrefixedCommandArgument<"String"> {
-  return { name, type: "String", description, resolver: (raw) => raw };
+export function createStringArgument(
+  options?: BaseArgumentOptions
+): PartialPrefixedCommandArgument<"String"> {
+  return {
+    type: "String",
+    description: options?.description,
+    resolver: (raw) => raw,
+  };
 }
 
-export function createNumberArgument({
-  name,
-  description,
-}: BaseArgumentOptions): PrefixedCommandArgument<"Number"> {
+export function createNumberArgument(
+  options?: BaseArgumentOptions
+): PartialPrefixedCommandArgument<"Number"> {
   return {
-    name,
     type: "Number",
-    description,
+    description: options?.description,
     resolver: parseInt,
   };
 }
 
-export function createBooleanArgument({
-  name,
-  description,
-}: BaseArgumentOptions): PrefixedCommandArgument<"Boolean"> {
+export function createBooleanArgument(
+  options?: BaseArgumentOptions
+): PartialPrefixedCommandArgument<"Boolean"> {
   return {
-    name,
     type: "Boolean",
-    description,
+    description: options?.description,
     resolver: Boolean,
   };
 }

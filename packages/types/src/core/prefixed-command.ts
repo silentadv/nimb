@@ -13,13 +13,18 @@ export interface PrefixedCommandArgumentTypeMap {
   Boolean: boolean;
 }
 
-export interface PrefixedCommandArgument<
-  T extends PrefixedCommandArgumentType = "String"
+export interface PartialPrefixedCommandArgument<
+  T extends PrefixedCommandArgumentType = PrefixedCommandArgumentType
 > {
-  name: string;
   type: T;
   resolver: PrefixedCommandArgumentResolver<T>;
   description?: string;
+}
+
+export interface PrefixedCommandArgument<
+  T extends PrefixedCommandArgumentType = PrefixedCommandArgumentType
+> extends PartialPrefixedCommandArgument<T> {
+  name: string;
 }
 
 export interface PrefixedCommandContext extends BaseCommandContext {
@@ -33,7 +38,7 @@ export interface PrefixedCommandMethods extends BaseCommand {
 
 export interface PrefixedCommand extends PrefixedCommandMethods {
   aliases: string[];
-  arguments: PrefixedCommandArgument[];
+  args: PrefixedCommandArgument[];
 }
 
 export interface PrefixedCommandOptions {

@@ -1,4 +1,4 @@
-import { Client } from "../../packages/core/src";
+import { Client } from "@nimb/core";
 import { GatewayIntentBits } from "discord-api-types/v10";
 
 const client = new Client({

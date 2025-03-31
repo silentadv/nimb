@@ -5,7 +5,8 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "build": "tsup src --dts --out-dir=./build"
+    "build": "tsup src --dts --out-dir=./build",
+    "test": "tsx --watch src/index.spec.ts"
   },
   "keywords": [],
   "author": "silentadv",
@@ -20,6 +21,7 @@
   },
   "dependencies": {
     "@nimb/gateway": "workspace:^",
-    "@nimb/rest": "workspace:^"
+    "@nimb/rest": "workspace:^",
+    "reflect-metadata": "^0.2.2"
   }
 }
